@@ -1,25 +1,21 @@
 %************************************************************************************************************************
 %************************************************************************************************************************
 
-%Be sure about the path contain New_Actin_Analysis.m
-
-%cd '\\sv5\public\Sekine\NEW_Results\m_e1-2'     %Location of the folder where you have the binary images
-
 clear
 
-cd '/Users/ssekine/Documents/MATLAB/zipROD_e6_5_2/'   %XXXXXXXXXXXXXX !!!
+cd '/Users/XXXXX/'   
 
 Numb_of_Images = 100;                  %% input the numbe of images you have
 
-%Result_address = '\\sv5\public\Sekine\NEW_Results\'; %location of the folder must called "NEW_Results" where to save excel file of the result
+%location of the folder must called "NEW_Results" where to save excel file of the result
 
-Result_address = '/Users/ssekine/Documents/MATLAB/zipROD/';  %XXXXXXXXXXXXXX !!!
+Result_address = '/Users/XXXXX/';  
 
 %************************************************************************************************************************
 %************************************************************************************************************************
-%Excel_filename = ['\\sv5\Public\Sekine\coloc_watershed\NEW_Results\NEW_Results.xlsx']; %where to save excel file of result
+%Excel_filename = ['XXXXXXXXX.xlsx']; 
 
-Excel_filename = [Result_address,'zipROD_e6_5_2.xlsx'];  %XXXXXXXXXXXXXX !!!
+Excel_filename = [Result_address,'XXXXXXXXX.xlsx'];  
 
 
 [fileName,pathName] = uigetfile('*.tif' )
@@ -254,9 +250,9 @@ end
 ALL_Result = cell2mat(ALL_ref_Coordinate_List);
 
 
-%Save results
+
 %**************************
-% Excel_filename = ['\\sv5\Public\Sekine\coloc_watershed\NEW_Results\NEW_Results.xlsx']; % location to save the excel file
+
 sheet = 1;
 xlswrite(Excel_filename,ALL_Result)
 
